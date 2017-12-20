@@ -1,0 +1,19 @@
+<div class="row">
+
+  <div class="col-lg-6">
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="add items here..." #refData>
+      <span class="input-group-btn">
+        <button class="btn btn-success" type="button" (click)="sendData(refData.value)"> Add </button>
+      </span>
+    </div>
+  </div>
+
+  <h2 *ngFor="let a of ActivityData;let i = index" contenteditable="true"> Activity {{i+1}} : {{a.itemName}}
+
+    <button class="btn btn-warning" type="button" style="margin-left:10px;" (click)="postAndUpdateData(a)"> Update </button>
+    <button class="btn btn-danger" type="button" style="margin-left:20px;" (click)="deleteData(a)"> Delete </button>
+
+  </h2>
+
+</div>
